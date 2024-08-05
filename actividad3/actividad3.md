@@ -164,13 +164,20 @@ cat: usuario1/directorio1/archivo2.txt: No such file or directory
 
 8. Verificación Final: Verifica los permisos y propietario de los archivos y directorio nuevamente con `ls -l` y `ls -ld`.
 ```
-└──╼ $ls -l
-total 0
-drwxr-xr-x 1 usuario2 usuario2 28 ago  4 21:53 Desktop
-drwxr-xr-x 1 usuario2 usuario2 22 ago  4 21:53 Templates
 
-└──╼ $ls -ld
-drwxr-xr-x 1 usuario2 usuario2 186 ago  4 21:53 .
+
+└──╼ $ls -l
+total 4
+-rw-r----- 1 usuario1 usuario1 15 ago  4 22:23 archivo1.txt
+drwxr-xr-x 1 usuario1 usuario1 28 ago  4 21:50 Desktop
+drwxr----- 1 usuario1 grupo1   24 ago  4 22:30 directorio1
+drwxr-xr-x 1 usuario1 usuario1 22 ago  4 21:50 Templates
+
+└──╼ $ls -ld-vivo
+drwxr-xr-x 1 usuario1 usuario1 232 ago  4 22:29 .
+
+
+
 ```
 
 
@@ -179,5 +186,5 @@ drwxr-xr-x 1 usuario2 usuario2 186 ago  4 21:53 .
 Contestar las siguientes preguntas:
 
     ¿Por qué es importante gestionar correctamente los usuarios y permisos en un sistema operativo? Para garantizar un menor manejo de los recursos y cumplir con los procesos de autenticacion de usuarios y su nivel de autorizacion dentro del sistema.
-    
+
     ¿Qué otros comandos o técnicas conocen para gestionar permisos en Linux? 
